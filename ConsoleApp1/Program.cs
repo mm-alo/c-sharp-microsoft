@@ -148,7 +148,33 @@
 // Console.WriteLine($"{course5Name} \t\t{gradeA} \t\t{course5Credit}");
 // Console.WriteLine($"Final GPA: {gradePointAverage}");
 
-Random roll = new Random();
-int dice = roll.Next(-100, 45);
+//classes, methods, parameters and arguments
+// Random roll = new Random();
+// int dice = roll.Next();
+// int dice1 = roll.Next(100);
+// int dice2 = roll.Next(50,100);
 
-Console.WriteLine(dice);
+// Console.WriteLine(dice);
+// Console.WriteLine(dice1);
+// Console.WriteLine(dice2);
+
+// int firstValue = 500;
+// int secondValue = 600;
+// int largerValue;
+// largerValue = Math.Max(firstValue, secondValue);
+// Console.WriteLine(largerValue);
+
+Random num = new Random();
+int num1 = num.Next(1,7);
+int num2 = num.Next(1,7);
+int num3 = num.Next(1,7);
+int total = num1 + num2 + num3;
+Console.WriteLine($"Num roll: {num1} + {num2} + {num3}: {total}");
+
+if (total > 10.5)
+{
+    Console.WriteLine("you win bitwin");
+} else
+{
+    Console.WriteLine("you lose, you'll fight the gorilla");
+}
