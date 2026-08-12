@@ -174,7 +174,7 @@ Console.WriteLine($"Num roll: {num1} + {num2} + {num3}: {total}");
 if (total > 10.5)
 {
     Console.WriteLine("you win bitwin");
-} else
+} if (total < 10.5)
 {
     Console.WriteLine("you lose, you'll fight the gorilla");
 }
