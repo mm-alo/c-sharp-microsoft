@@ -197,3 +197,8 @@
 Random random = new Random();
 int daysUntilExpiration = random.Next(12);
 int discountPercentage = 0; // will continue tommorow haha!
+
+if (daysUntilExpiration < 4)
+{
+    Console.WriteLine("subscribe for more");
+}
