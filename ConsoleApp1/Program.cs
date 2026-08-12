@@ -164,31 +164,37 @@
 // largerValue = Math.Max(firstValue, secondValue);
 // Console.WriteLine(largerValue);
 
-Random num = new Random();
-int num1 = num.Next(1,7);
-int num2 = num.Next(1,7);
-int num3 = num.Next(1,7);
-int total = num1 + num2 + num3;
+// Random num = new Random();
+// int num1 = num.Next(1,7);
+// int num2 = num.Next(1,7);
+// int num3 = num.Next(1,7);
+// int total = num1 + num2 + num3;
 
-Console.WriteLine($"Num roll: {num1} + {num2} + {num3}: {total}");
+// Console.WriteLine($"Num roll: {num1} + {num2} + {num3}: {total}");
 
-if ((num1 == num2) || (num2 == num3) || (num3 == num1))
-{
-    Console.WriteLine("Congrats you rolled Doubles! Double or Nothing");
-    total += 2;
-}
-if ((num1 == num2) && (num2 == num3))
-{
-    Console.WriteLine("Congrats you rolled Triples! Tripled Fun");
-    total += 3;
-}
-if (total > 15)
-{
-    Console.WriteLine("Congrats you win");
-    Console.WriteLine($"Double or Nothing? \n Your total is:  {total}");
-}
-if (total < 15 )
-{
-    Console.WriteLine("You Lose, hahaha fatass");
-    Console.WriteLine($"Gamble your life away \n Your total is: {total}");
-}
+// if ((num1 == num2) || (num2 == num3) || (num3 == num1))
+// {
+//     Console.WriteLine("Congrats you rolled Doubles! Double or Nothing");
+//     total += 2;
+// }
+// if ((num1 == num2) && (num2 == num3))
+// {
+//     Console.WriteLine("Congrats you rolled Triples! Tripled Fun");
+//     total += 3;
+// }
+// if (total > 15)
+// {
+//     Console.WriteLine("Congrats you win");
+//     Console.WriteLine($"Double or Nothing? \n Your total is:  {total}");
+// }
+// if (total < 15 )
+// {
+//     Console.WriteLine("You Lose, hahaha fatass");
+//     Console.WriteLine($"Gamble your life away \n Your total is: {total}");
+// }
+
+// module challenge - if else block
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0; // will continue tommorow haha!
+
