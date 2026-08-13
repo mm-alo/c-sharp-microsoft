@@ -258,13 +258,66 @@
 //     }
 // }
 
-int[] orderIds = [100, 200, 300, 400, 500];
-int sum = 0;
-int idNum = 0;
-foreach(int id in orderIds)
+// int[] orderIds = [100, 200, 300, 400, 500];
+// int sum = 0;
+// int idNum = 0;
+// foreach(int id in orderIds)
+// {
+//     sum += id;
+//     idNum++;
+//     Console.WriteLine($"Id number {idNum}, total is {sum}");
+// }
+// Console.WriteLine($"total is {sum}");
+
+//guided project using foreach, if to process array data logic
+// initialize variables - graded assignments 
+// Student         Grade
+
+// Sophia          95.8    A
+// Andrew          91.2    A-
+// Emma            90.4    A-
+// Logan           93      A
+// Becky           94.8    A
+// Chris           93.4    A
+// Eric            93.4    A
+// Gregor          94.6    A
+// Press the Enter key to continue
+//desired output above
+
+int currentAssignments = 5;
+
+int[] sophia = new int[] {90, 86, 87, 98, 100};
+int[] andrew = new int[] {92, 89,81, 96, 90};
+int[] emma = new int[] {90, 85, 87, 98, 68};
+int[] logan = new int[] {90, 95, 87, 88, 96};
+
+string[] studentNames = ["sophia", "andrew", "emma", "logan"];
+
+int andrewSum = 0;
+decimal andrewScore;
+
+int emmaSum = 0;
+decimal emmaScore;
+
+int loganSum = 0;
+decimal loganScore;
+
+
+Console.WriteLine("Student \t Grade \n");
+foreach (string name in studentNames)
 {
-    sum += id;
-    idNum++;
-    Console.WriteLine($"Id number {idNum}, total is {sum}");
+    if(name == "sophia")
+    {
+        int sophiaSum = 0;
+        decimal sophiaScore;
+        
+        foreach(int score in sophia)
+        {
+            sophiaSum += score;
+        }
+
+        sophiaScore = (decimal) sophiaSum / currentAssignments;
+        Console.WriteLine($"Sophia \t\t {sophiaScore} \tA-");
+    }
 }
-Console.WriteLine($"total is {sum}");
+
