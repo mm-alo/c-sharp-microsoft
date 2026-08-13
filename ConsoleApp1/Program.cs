@@ -228,11 +228,43 @@
 // fraudulentOrderIDs[1] = "B456";
 // fraudulentOrderIDs[2] = "C789";
 
-string[] fraudulentOrderIDs = [ "A123lo", "B456", "C789"];
+// string[] fraudulentOrderIDs = [ "A123lo", "B456", "C789"];
 
-Console.WriteLine($"first: {fraudulentOrderIDs[0]}");
-Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
-Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
-fraudulentOrderIDs[0] = "dragunuv";
-Console.WriteLine($"first: {fraudulentOrderIDs[0]} \n");
-Console.WriteLine($"how many orders do i have: {fraudulentOrderIDs.Length}");
+// Console.WriteLine($"first: {fraudulentOrderIDs[0]}");
+// Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+// Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+// fraudulentOrderIDs[0] = "dragunuv";
+// Console.WriteLine($"first: {fraudulentOrderIDs[0]} \n");
+// Console.WriteLine($"how many orders do i have: {fraudulentOrderIDs.Length}");
+
+// int[] inventory = {100, 200, 300, 400};
+// int sum = 0;
+
+// foreach (int inv in inventory)
+// {
+//     sum += inv;
+//     Console.WriteLine($"Total is: {sum}");
+// }
+
+
+// string[] fraudOrders = {"B123", "C234", "A345","C15", 
+// "B177", "G3003", "G3003", "B179"};
+ 
+//  foreach (string id in fraudOrders)
+// {
+//     if (id.StartsWith("B"))
+//     {
+//         Console.WriteLine($"{id}");
+//     }
+// }
+
+int[] orderIds = [100, 200, 300, 400, 500];
+int sum = 0;
+int idNum = 0;
+foreach(int id in orderIds)
+{
+    sum += id;
+    idNum++;
+    Console.WriteLine($"Id number {idNum}, total is {sum}");
+}
+Console.WriteLine($"total is {sum}");
