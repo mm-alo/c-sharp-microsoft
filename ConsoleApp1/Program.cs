@@ -299,6 +299,33 @@ int[] studentScores = new int[10];
 foreach (string name in currentName)
 {
     string currentStudent = name;
-    Console.WriteLine(currentStudent);
+
+    if(currentStudent == "sophia")
+    {
+        studentScores = sophia;   
+    } 
+    else if (currentStudent == "emma")
+    {
+        studentScores = emma;
+    }
+    else if (currentStudent == "andrew")
+    {
+        studentScores = andrew;
+    }
+    else if (currentStudent == "logan")
+    {
+        studentScores = logan;
+    }
+
+    int sumStudentScores = 0;
+    decimal studentAvg = 0;
+
+    foreach (int score in studentScores)
+    {
+        sumStudentScores += score;
+    }
+
+    studentAvg = (decimal) sumStudentScores / currentAssignments;
+    Console.WriteLine($"{currentStudent} \t {studentAvg}");
 }
 
