@@ -284,40 +284,21 @@
 // Press the Enter key to continue
 //desired output above
 
+//guided project
+ 
 int currentAssignments = 5;
 
-int[] sophia = new int[] {90, 86, 87, 98, 100};
-int[] andrew = new int[] {92, 89,81, 96, 90};
-int[] emma = new int[] {90, 85, 87, 98, 68};
-int[] logan = new int[] {90, 95, 87, 88, 96};
+int[] sophia = [90, 91, 92, 93, 94];
+int[] emma = [81, 82, 83, 84, 85];
+int[] andrew = [86, 87, 88, 89, 90];
+int[] logan = [75, 76, 77, 78, 79];
 
-string[] studentNames = ["sophia", "andrew", "emma", "logan"];
+string[] currentName = ["sophia", "emma", "andrew", "logan"];
+int[] studentScores = new int[10];
 
-int andrewSum = 0;
-decimal andrewScore;
-
-int emmaSum = 0;
-decimal emmaScore;
-
-int loganSum = 0;
-decimal loganScore;
-
-
-Console.WriteLine("Student \t Grade \n");
-foreach (string name in studentNames)
+foreach (string name in currentName)
 {
-    if(name == "sophia")
-    {
-        int sophiaSum = 0;
-        decimal sophiaScore;
-        
-        foreach(int score in sophia)
-        {
-            sophiaSum += score;
-        }
-
-        sophiaScore = (decimal) sophiaSum / currentAssignments;
-        Console.WriteLine($"Sophia \t\t {sophiaScore} \tA-");
-    }
+    string currentStudent = name;
+    Console.WriteLine(currentStudent);
 }
 
