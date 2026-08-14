@@ -295,11 +295,12 @@ int[] logan = [75, 76, 77, 78, 79];
 
 string[] currentName = ["sophia", "emma", "andrew", "logan"];
 int[] studentScores = new int[10];
+string currentGrade = "";
 
+Console.WriteLine("Student \t Grades");
 foreach (string name in currentName)
 {
     string currentStudent = name;
-
     if(currentStudent == "sophia")
     {
         studentScores = sophia;   
@@ -326,6 +327,30 @@ foreach (string name in currentName)
     }
 
     studentAvg = (decimal) sumStudentScores / currentAssignments;
-    Console.WriteLine($"{currentStudent} \t {studentAvg}");
+
+    if (studentAvg >= 97)
+    {
+        currentGrade = "A+";
+    } 
+    else if (studentAvg >= 90)
+    {
+        currentGrade = "A";
+    }
+    else if (studentAvg >= 85)
+    {
+        currentGrade = "B+";
+    } 
+    else if (studentAvg >= 80)
+    {
+        currentGrade = "B";
+    }
+    else if (studentAvg >= 75)
+    {
+        currentGrade = "palakol umay";
+    }
+
+
+
+    Console.WriteLine($"{currentStudent} \t\t {studentAvg} \t {currentGrade}");
 }
 
