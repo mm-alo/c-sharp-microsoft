@@ -286,71 +286,132 @@
 
 //guided project
  
-int currentAssignments = 5;
+// int currentAssignments = 5;
 
-int[] sophia = [90, 91, 92, 93, 94];
-int[] emma = [81, 82, 83, 84, 85];
-int[] andrew = [86, 87, 88, 89, 90];
-int[] logan = [75, 76, 77, 78, 79];
+// int[] sophia = [90, 91, 92, 93, 94];
+// int[] emma = [81, 82, 83, 84, 85];
+// int[] andrew = [86, 87, 88, 89, 90];
+// int[] logan = [75, 76, 77, 78, 79];
 
-string[] currentName = ["sophia", "emma", "andrew", "logan"];
-int[] studentScores = new int[10];
-string currentGrade = "";
+// string[] currentName = ["sophia", "emma", "andrew", "logan"];
+// int[] studentScores = new int[10];
+// string currentGrade = "";
 
-Console.WriteLine("Student \t Grades");
-foreach (string name in currentName)
+// Console.WriteLine("Student \t Grades");
+// foreach (string name in currentName)
+// {
+//     string currentStudent = name;
+//     if(currentStudent == "sophia")
+//     {
+//         studentScores = sophia;   
+//     } 
+//     else if (currentStudent == "emma")
+//     {
+//         studentScores = emma;
+//     }
+//     else if (currentStudent == "andrew")
+//     {
+//         studentScores = andrew;
+//     }
+//     else if (currentStudent == "logan")
+//     {
+//         studentScores = logan;
+//     }
+
+//     int sumStudentScores = 0;
+//     decimal studentAvg = 0;
+
+//     foreach (int score in studentScores)
+//     {
+//         sumStudentScores += score;
+//     }
+
+//     studentAvg = (decimal) sumStudentScores / currentAssignments;
+
+//     if (studentAvg >= 97)
+//     {
+//         currentGrade = "A+";
+//     } 
+//     else if (studentAvg >= 90)
+//     {
+//         currentGrade = "A";
+//     }
+//     else if (studentAvg >= 85)
+//     {
+//         currentGrade = "B+";
+//     } 
+//     else if (studentAvg >= 80)
+//     {
+//         currentGrade = "B";
+//     }
+//     else if (studentAvg >= 75)
+//     {
+//         currentGrade = "palakol umay";
+//     }
+
+
+//     Console.WriteLine($"{currentStudent} \t\t {studentAvg} \t {currentGrade}");
+// }
+
+//module challenge
+// Student         Exam Score      Overall Grade   Extra Credit
+
+// Sophia          92.2            95.88   A       92 (3.68 pts)
+// Andrew          89.6            91.38   A-      89 (1.78 pts)
+// Emma            85.6            90.94   A-      89 (5.34 pts)
+// Logan           91.2            93.12   A       96 (1.92 pts)
+// output
+
+int[] sophia = [90, 86, 87, 98, 100];
+int[] emma = [92, 89, 81, 96, 90];
+int[] andrew = [ 90, 85, 87, 98, 68];
+int[] logan = [90, 95, 87, 88, 96];
+double[] examScore = [92.2, 89.6, 85.6, 91.2];
+
+string[] currentStudent = ["sophia", "emma", "andrew", "logan"];
+int[] studentScore =  new int[10];
+double currentExamScore = 0;
+
+Console.WriteLine("Student \t Exam Score \t Overall Grade \t Extra Credit \n");
+
+foreach (string name in currentStudent)
 {
-    string currentStudent = name;
-    if(currentStudent == "sophia")
+    string currentName = name;
+    if(currentName == "sophia")
     {
-        studentScores = sophia;   
-    } 
-    else if (currentStudent == "emma")
-    {
-        studentScores = emma;
+        studentScore = sophia;
+        currentExamScore = examScore[0];
     }
-    else if (currentStudent == "andrew")
+    else if (currentName == "emma")
     {
-        studentScores = andrew;
+        studentScore = emma;
+        currentExamScore = examScore[1];
     }
-    else if (currentStudent == "logan")
+    else if (currentName == "andrew")
     {
-        studentScores = logan;
+        studentScore = andrew;
+        currentExamScore = examScore[2];
     }
-
-    int sumStudentScores = 0;
-    decimal studentAvg = 0;
-
-    foreach (int score in studentScores)
+    else if (currentName == "logan")
     {
-        sumStudentScores += score;
-    }
-
-    studentAvg = (decimal) sumStudentScores / currentAssignments;
-
-    if (studentAvg >= 97)
-    {
-        currentGrade = "A+";
-    } 
-    else if (studentAvg >= 90)
-    {
-        currentGrade = "A";
-    }
-    else if (studentAvg >= 85)
-    {
-        currentGrade = "B+";
-    } 
-    else if (studentAvg >= 80)
-    {
-        currentGrade = "B";
-    }
-    else if (studentAvg >= 75)
-    {
-        currentGrade = "palakol umay";
+        studentScore = logan;
+        currentExamScore = examScore[3];
     }
 
 
+    int sumScore = 0;
+    decimal scoreAvg = 0;
+    decimal extraCredit = 0;
+    decimal OverallGrade = 0;
 
-    Console.WriteLine($"{currentStudent} \t\t {studentAvg} \t {currentGrade}");
+    foreach (int score in studentScore)
+    {
+        sumScore += score;
+    }
+   
+    extraCredit =  sumScore * .10m / 5;
+    scoreAvg = (decimal) sumScore / 5;
+    OverallGrade = (decimal) (sumScore + extraCredit) / 5;
+
+    Console.WriteLine($"{currentName} \t\t {currentExamScore} \t\t {OverallGrade} \t\t {scoreAvg} {extraCredit}");
 }
-
