@@ -372,7 +372,7 @@ string[] currentStudent = ["sophia", "emma", "andrew", "logan"];
 int[] studentScore =  new int[10];
 double currentExamScore = 0;
 
-Console.WriteLine("Student \t Exam Score \t Overall Grade \t Extra Credit \n");
+Console.WriteLine("Student \t Exam Score \t Overall Grade \t \t Extra Credit \n");
 
 foreach (string name in currentStudent)
 {
@@ -413,5 +413,5 @@ foreach (string name in currentStudent)
     scoreAvg = (decimal) sumScore / 5;
     OverallGrade = (decimal) (sumScore + extraCredit) / 5;
 
-    Console.WriteLine($"{currentName} \t\t {currentExamScore} \t\t {OverallGrade} \t\t {scoreAvg} {extraCredit}");
+    Console.WriteLine($"{currentName} \t\t {currentExamScore} \t\t {OverallGrade} \t\t {scoreAvg} ({extraCredit})");
 }
