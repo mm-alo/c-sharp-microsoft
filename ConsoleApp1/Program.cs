@@ -362,56 +362,75 @@
 // Logan           91.2            93.12   A       96 (1.92 pts)
 // output
 
-int[] sophia = [90, 86, 87, 98, 100];
-int[] emma = [92, 89, 81, 96, 90];
-int[] andrew = [ 90, 85, 87, 98, 68];
-int[] logan = [90, 95, 87, 88, 96];
-double[] examScore = [92.2, 89.6, 85.6, 91.2];
+// int[] sophia = [90, 86, 87, 98, 100];
+// int[] emma = [92, 89, 81, 96, 90];
+// int[] andrew = [ 90, 85, 87, 98, 68];
+// int[] logan = [90, 95, 87, 88, 96];
+// double[] examScore = [92.2, 89.6, 85.6, 91.2];
 
-string[] currentStudent = ["sophia", "emma", "andrew", "logan"];
-int[] studentScore =  new int[10];
-double currentExamScore = 0;
+// string[] currentStudent = ["sophia", "emma", "andrew", "logan"];
+// int[] studentScore =  new int[10];
+// double currentExamScore = 0;
 
-Console.WriteLine("Student \t Exam Score \t Overall Grade \t \t Extra Credit \n");
+// Console.WriteLine("Student \t Exam Score \t Overall Grade \t \t Extra Credit \n");
 
-foreach (string name in currentStudent)
-{
-    string currentName = name;
-    if(currentName == "sophia")
-    {
-        studentScore = sophia;
-        currentExamScore = examScore[0];
-    }
-    else if (currentName == "emma")
-    {
-        studentScore = emma;
-        currentExamScore = examScore[1];
-    }
-    else if (currentName == "andrew")
-    {
-        studentScore = andrew;
-        currentExamScore = examScore[2];
-    }
-    else if (currentName == "logan")
-    {
-        studentScore = logan;
-        currentExamScore = examScore[3];
-    }
+// foreach (string name in currentStudent)
+// {
+//     string currentName = name;
+//     if(currentName == "sophia")
+//     {
+//         studentScore = sophia;
+//         currentExamScore = examScore[0];
+//     }
+//     else if (currentName == "emma")
+//     {
+//         studentScore = emma;
+//         currentExamScore = examScore[1];
+//     }
+//     else if (currentName == "andrew")
+//     {
+//         studentScore = andrew;
+//         currentExamScore = examScore[2];
+//     }
+//     else if (currentName == "logan")
+//     {
+//         studentScore = logan;
+//         currentExamScore = examScore[3];
+//     }
 
 
-    int sumScore = 0;
-    decimal scoreAvg = 0;
-    decimal extraCredit = 0;
-    decimal OverallGrade = 0;
+//     int sumScore = 0;
+//     decimal scoreAvg = 0;
+//     decimal extraCredit = 0;
+//     decimal OverallGrade = 0;
 
-    foreach (int score in studentScore)
-    {
-        sumScore += score;
-    }
+//     foreach (int score in studentScore)
+//     {
+//         sumScore += score;
+//     }
    
-    extraCredit =  sumScore * .10m / 5;
-    scoreAvg = (decimal) sumScore / 5;
-    OverallGrade = (decimal) (sumScore + extraCredit) / 5;
+//     extraCredit =  sumScore * .10m / 5;
+//     scoreAvg = (decimal) sumScore / 5;
+//     OverallGrade = (decimal) (sumScore + extraCredit) / 5;
 
-    Console.WriteLine($"{currentName} \t\t {currentExamScore} \t\t {OverallGrade} \t\t {scoreAvg} ({extraCredit})");
-}
+//     Console.WriteLine($"{currentName} \t\t {currentExamScore} \t\t {OverallGrade} \t\t {scoreAvg} ({extraCredit})");
+// }
+
+// Console.WriteLine("a" == "a");
+// Console.WriteLine("a" == "A");
+// Console.WriteLine(1 == 2);
+
+// string myValue = "a";
+// string myValue1 = "A ";
+
+// Console.WriteLine(myValue.ToLower().Trim() == myValue1.ToLower().Trim());
+// string pangram = "A quick brown fox jumps over the lazy dog";
+// Console.WriteLine(pangram.Contains("fox"));
+// Console.WriteLine(!pangram.Contains("cow"));
+
+//conditional operation
+int saleAmount = 1001;
+int discount = saleAmount > 1002 ? 100 : 50;
+// evaluate the first condition "saleAmount > 1000" if it's true return ? 100 and if false : return 50
+
+Console.WriteLine(discount);
