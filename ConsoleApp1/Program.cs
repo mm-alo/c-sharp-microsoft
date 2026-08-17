@@ -429,8 +429,38 @@
 // Console.WriteLine(!pangram.Contains("cow"));
 
 //conditional operation
-int saleAmount = 1001;
+// int saleAmount = 1001;
 // int discount = saleAmount > 1002 ? 100 : 50;
 // evaluate the first condition "saleAmount > 1000" if it's true return ? 100 and if false : return 50
 
-Console.WriteLine($"discount: {(saleAmount > 1000 ? 100 : 50)}");
+// Console.WriteLine($"discount: {(saleAmount > 1000 ? 100 : 50)}");
+
+// module challenge coin flip
+// Random flip = new Random();
+// int coin = flip.Next(1,3);
+// Console.WriteLine($"Result: {(coin == 1 ? "Heads" : "Tails")} ");
+
+string permission = "Admin | Manager";
+int level = 10;
+
+if (permission.Contains("Admin") && level > 55)
+{
+    Console.WriteLine("Welcome, Super Admin.");
+} 
+else if(permission.Contains("Admin") && level <= 55)
+{
+    Console.WriteLine("Welcome, Admin user.");
+
+}
+else if (permission.Contains("Manager") && level >= 20)
+{
+    Console.WriteLine("Contact admin for Access");
+} 
+else if (permission.Contains("Manager") && level < 20)
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
