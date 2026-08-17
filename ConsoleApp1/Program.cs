@@ -440,27 +440,78 @@
 // int coin = flip.Next(1,3);
 // Console.WriteLine($"Result: {(coin == 1 ? "Heads" : "Tails")} ");
 
-string permission = "Admin | Manager";
-int level = 10;
+// string permission = "Admin | Managaer";
+// int level = 10;
 
-if (permission.Contains("Admin") && level > 55)
-{
-    Console.WriteLine("Welcome, Super Admin.");
-} 
-else if(permission.Contains("Admin") && level <= 55)
-{
-    Console.WriteLine("Welcome, Admin user.");
+// if (permission.Contains("Admin") && level > 55)
+// {
+//     Console.WriteLine("Welcome, Super Admin.");
+// } 
+// else if(permission.Contains("Admin") && level <= 55)
+// {
+//     Console.WriteLine("Welcome, Admin user.");
 
-}
-else if (permission.Contains("Manager") && level >= 20)
+// }
+// else if (permission.Contains("Manager") && level >= 20)
+// {
+//     Console.WriteLine("Contact admin for Access");
+// } 
+// else if (permission.Contains("Manager") && level < 20)
+// {
+//     Console.WriteLine("You do not have sufficient privileges.");
+// }
+// else
+// {
+//     Console.WriteLine("You do not have sufficient privileges.");
+// }
+
+// bool flag = true;
+// if (flag)
+// {
+//     int value = 10;
+//     Console.WriteLine($"Inside the code block {flag}");
+// }
+// Console.WriteLine($"Outside the code block {flag}");
+
+// int[] numbers = { 4, 8, 15, 16, 23, 42 };
+// int total = 0;
+// bool found = false;
+
+// foreach (int number in numbers)
+// {
+//     if (number == 42)
+//     {
+//         found = true;
+//         if (found)
+//         {
+//             Console.WriteLine("Set Contains 42");
+//         }
+//     }
+//     total += number;
+// }
+// Console.WriteLine($"Total: {total}");
+
+int employeeLevel = 100;
+string employeeName = "Emmanuel Alo";
+
+string employeeTitle = "";
+
+switch (employeeLevel)
 {
-    Console.WriteLine("Contact admin for Access");
-} 
-else if (permission.Contains("Manager") && level < 20)
-{
-    Console.WriteLine("You do not have sufficient privileges.");
+    case 100:
+    employeeTitle = "CEO";
+    break;
+
+    case 200:
+    employeeTitle = "Vice President";
+    break;
+
+    case 300:
+    employeeTitle = "Manager";
+    break;
+
+    case 400:
+    employeeTitle = "Section Leader";
+    break;
 }
-else
-{
-    Console.WriteLine("You do not have sufficient privileges.");
-}
+Console.WriteLine($"{employeeName}: {employeeTitle}");
