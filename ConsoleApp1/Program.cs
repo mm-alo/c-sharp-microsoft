@@ -430,7 +430,7 @@
 
 //conditional operation
 int saleAmount = 1001;
-int discount = saleAmount > 1002 ? 100 : 50;
+// int discount = saleAmount > 1002 ? 100 : 50;
 // evaluate the first condition "saleAmount > 1000" if it's true return ? 100 and if false : return 50
 
-Console.WriteLine(discount);
+Console.WriteLine($"discount: {(saleAmount > 1000 ? 100 : 50)}");
