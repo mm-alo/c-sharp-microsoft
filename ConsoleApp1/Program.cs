@@ -516,59 +516,11 @@
 // }
 // Console.WriteLine($"{employeeName}: {employeeTitle}");
 
-string sku = "01-MN-L";
+// for iterations loop
 
-string[] product = sku.Split('-');
 
-string type = "";
-string color = "";
-string size = "";
-
-switch (product[01])
+string[] name = {"Alex", "Eddie", "David", "Michael"};
+for (int i = 0; i < name.Length; i++)
 {
-    case "01":
-    type = "Sweat Shirt";
-    break;
-
-    case "02":
-    type = "T-shirt";
-    break;
-
-    default:
-    type = "Sweat Pants";
-    break;
-}
-switch (product[1])
-{
-    case "BL":
-    color = "Black";
-    break;
-
-    case "MN":
-    color = "Maroon";
-    break;
-
-    default: 
-    color = "White";
-    break;
-}
-switch (product[2])
-{
-    case "S":
-    size = "small";
-    break;
-
-    case "M":
-    size = "medium";
-    break;
-
-    case "L":
-    size = "large";
-    break;
-
-    default:
-    size = "One size all";
-    break;
-    
-}
-Console.WriteLine($"{type}: {color} - {size} ");
+    if (name[i] == "David") name[i] = "sammy";
+} foreach (string names in name) Console.WriteLine(names);
