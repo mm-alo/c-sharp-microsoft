@@ -491,27 +491,84 @@
 // }
 // Console.WriteLine($"Total: {total}");
 
-int employeeLevel = 100;
-string employeeName = "Emmanuel Alo";
+// int employeeLevel = 0;
+// string employeeName = "Emmanuel Alo";
 
-string employeeTitle = "";
+// string employeeTitle = "";
 
-switch (employeeLevel)
+// switch (employeeLevel)
+// {
+//     case 100:
+//     employeeTitle = "CEO";
+//     break;
+
+//     case 200:
+//     employeeTitle = "Vice President";
+//     break;
+
+//     case 300:
+//     employeeTitle = "Manager";
+//     break;
+
+//     default:
+//     employeeTitle = "Section Leader";
+//     break;
+// }
+// Console.WriteLine($"{employeeName}: {employeeTitle}");
+
+string sku = "01-MN-L";
+
+string[] product = sku.Split('-');
+
+string type = "";
+string color = "";
+string size = "";
+
+switch (product[01])
 {
-    case 100:
-    employeeTitle = "CEO";
+    case "01":
+    type = "Sweat Shirt";
     break;
 
-    case 200:
-    employeeTitle = "Vice President";
+    case "02":
+    type = "T-shirt";
     break;
 
-    case 300:
-    employeeTitle = "Manager";
-    break;
-
-    case 400:
-    employeeTitle = "Section Leader";
+    default:
+    type = "Sweat Pants";
     break;
 }
-Console.WriteLine($"{employeeName}: {employeeTitle}");
+switch (product[1])
+{
+    case "BL":
+    color = "Black";
+    break;
+
+    case "MN":
+    color = "Maroon";
+    break;
+
+    default: 
+    color = "White";
+    break;
+}
+switch (product[2])
+{
+    case "S":
+    size = "small";
+    break;
+
+    case "M":
+    size = "medium";
+    break;
+
+    case "L":
+    size = "large";
+    break;
+
+    default:
+    size = "One size all";
+    break;
+    
+}
+Console.WriteLine($"{type}: {color} - {size} ");
