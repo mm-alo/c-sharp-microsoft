@@ -519,8 +519,14 @@
 // for iterations loop
 
 
-string[] name = {"Alex", "Eddie", "David", "Michael"};
-for (int i = 0; i < name.Length; i++)
+for (int i = 1; i < 101; i++)
 {
-    if (name[i] == "David") name[i] = "sammy";
-} foreach (string names in name) Console.WriteLine(names);
+    if ((i % 3 == 0) && (i % 5 == 0))
+        Console.WriteLine($"{i} - FizzBuzz");
+    else if (i % 3 == 0)
+        Console.WriteLine($"{i} - Fizz");
+    else if (i % 5 == 0)
+        Console.WriteLine($"{i} - Buzz");
+    else
+        Console.WriteLine($"{i}");
+}
