@@ -249,7 +249,7 @@
 
 // string[] fraudOrders = {"B123", "C234", "A345","C15", 
 // "B177", "G3003", "G3003", "B179"};
- 
+
 //  foreach (string id in fraudOrders)
 // {
 //     if (id.StartsWith("B"))
@@ -285,7 +285,7 @@
 //desired output above
 
 //guided project
- 
+
 // int currentAssignments = 5;
 
 // int[] sophia = [90, 91, 92, 93, 94];
@@ -408,7 +408,7 @@
 //     {
 //         sumScore += score;
 //     }
-   
+
 //     extraCredit =  sumScore * .10m / 5;
 //     scoreAvg = (decimal) sumScore / 5;
 //     OverallGrade = (decimal) (sumScore + extraCredit) / 5;
@@ -551,21 +551,76 @@
 
 // Console.WriteLine(heroHealth > monsterHealth ? "Hero wins" : "Monster wins");
 
-string? readResults;
-bool isValid = false;
-Console.WriteLine("Enter a string need atleast 3 characters");
+// string? readResults;
+// bool isValid = false;
+// Console.WriteLine("Enter a string need atleast 3 characters");
+
+// do
+// {
+//     readResults = Console.ReadLine();
+//     if (readResults.Length > 3)
+//     {
+//         Console.WriteLine("Valid input");
+//         isValid = true;
+//         continue;
+//     } else if (readResults.Length < 3)
+//     {
+//         Console.WriteLine("Invalid input");
+//     }
+
+// } while (isValid == false);
+
+
+// string? readResult = " ";
+// int numericValue = 0;
+// bool validNumber = false;
+
+// Console.WriteLine("Enter a integer value between 5 and 10");
+// do
+// {
+//     readResult = Console.ReadLine();
+//     validNumber = int.TryParse(readResult, out numericValue);
+
+
+//     if (validNumber == true)
+//     {
+//         if (numericValue >= 5 && numericValue <= 10)
+//         {
+//             Console.WriteLine($"Your input value ({numericValue}) has been accepted.");
+//         }
+//         else
+//         {
+//             Console.WriteLine($"You entered {numericValue}. Please enter a number between 5 and 10.");
+//             validNumber = false;
+//         }
+//     } else
+//     {
+
+//         Console.WriteLine("Sorry, you entered invalid number, please try again");
+//     }
+// } while (validNumber == false);
+
+
+
+string[] role = ["Administrator", "Manager", "User"];
+bool validLever = false;
+string? currentLevel;
+
+Console.WriteLine("Enter your roll name (Administrator, Manager or User)");
 
 do
 {
-    readResults = Console.ReadLine();
-    if (readResults.Length > 3)
-    {
-        Console.WriteLine("Valid input");
-        isValid = true;
-        continue;
-    } else if (readResults.Length < 3)
-    {
-        Console.WriteLine("Invalid input");
-    }
+    currentLevel = Console.ReadLine();
+   
+        if (role.Contains(currentLevel.Trim())) //not accessing just checking
+        {
+            Console.WriteLine($"Your input ({currentLevel}) has been accepted");
+            validLever = true;
+            break;
+        } else {
+            Console.WriteLine($"The role name that you entered, {currentLevel} is not valid");
+        }
+    
 
-} while (isValid == false);
+} while (validLever == false);
+
