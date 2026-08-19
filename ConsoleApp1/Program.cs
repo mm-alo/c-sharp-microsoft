@@ -537,10 +537,16 @@ int monsterHealth = 10;
 
 do
 {
-    int heroAttack = attack.Next(1,11);
-    monsterHealth -= monsterHealth;
-    Console.WriteLine("you have damaged the monster");
+    int monsterAttack = attack.Next(1,6);
+    heroHealth -= monsterAttack;
+    Console.WriteLine($"Hero was damaged and lost {monsterAttack} health and now has {heroHealth} health");
 
+    if(heroHealth <= 0) continue;
 
-    
-}while(heroHealth > 0);
+    int heroAttack = attack.Next(1,6);
+    monsterHealth -= heroAttack;
+    Console.WriteLine($"Monster was damaged and lost {heroAttack} health and now has {monsterHealth} health");
+
+} while (heroHealth > 0 && monsterHealth > 0);
+
+Console.WriteLine(heroHealth > monsterHealth ? "Hero wins" : "Monster wins");
