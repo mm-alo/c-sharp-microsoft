@@ -531,22 +531,41 @@
 //         Console.WriteLine($"{i}");
 // }
 
-Random attack = new Random();
-int heroHealth = 10;
-int monsterHealth = 10;
+// Random attack = new Random();
+// int heroHealth = 10;
+// int monsterHealth = 10;
+
+// do
+// {
+//     int monsterAttack = attack.Next(1,6);
+//     heroHealth -= monsterAttack;
+//     Console.WriteLine($"Hero was damaged and lost {monsterAttack} health and now has {heroHealth} health");
+
+//     if(heroHealth <= 0) continue;
+
+//     int heroAttack = attack.Next(1,6);
+//     monsterHealth -= heroAttack;
+//     Console.WriteLine($"Monster was damaged and lost {heroAttack} health and now has {monsterHealth} health");
+
+// } while (heroHealth > 0 && monsterHealth > 0);
+
+// Console.WriteLine(heroHealth > monsterHealth ? "Hero wins" : "Monster wins");
+
+string? readResults;
+bool isValid = false;
+Console.WriteLine("Enter a string need atleast 3 characters");
 
 do
 {
-    int monsterAttack = attack.Next(1,6);
-    heroHealth -= monsterAttack;
-    Console.WriteLine($"Hero was damaged and lost {monsterAttack} health and now has {heroHealth} health");
+    readResults = Console.ReadLine();
+    if (readResults.Length > 3)
+    {
+        Console.WriteLine("Valid input");
+        isValid = true;
+        continue;
+    } else if (readResults.Length < 3)
+    {
+        Console.WriteLine("Invalid input");
+    }
 
-    if(heroHealth <= 0) continue;
-
-    int heroAttack = attack.Next(1,6);
-    monsterHealth -= heroAttack;
-    Console.WriteLine($"Monster was damaged and lost {heroAttack} health and now has {monsterHealth} health");
-
-} while (heroHealth > 0 && monsterHealth > 0);
-
-Console.WriteLine(heroHealth > monsterHealth ? "Hero wins" : "Monster wins");
+} while (isValid == false);
