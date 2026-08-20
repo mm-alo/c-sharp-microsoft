@@ -602,25 +602,32 @@
 
 
 
-string[] role = ["Administrator", "Manager", "User"];
-bool validLever = false;
-string? currentLevel;
+// string[] role = ["Administrator", "Manager", "User"];
+// bool validLever = false;
+// string? currentLevel;
 
-Console.WriteLine("Enter your roll name (Administrator, Manager or User)");
+// Console.WriteLine("Enter your roll name (Administrator, Manager or User)");
 
-do
-{
-    currentLevel = Console.ReadLine();
+// do
+// {
+//     currentLevel = Console.ReadLine();
    
-        if (role.Contains(currentLevel.Trim())) //not accessing just checking
-        {
-            Console.WriteLine($"Your input ({currentLevel}) has been accepted");
-            validLever = true;
-            break;
-        } else {
-            Console.WriteLine($"The role name that you entered, {currentLevel} is not valid");
-        }
+//         if (role.Contains(currentLevel.Trim())) //not accessing just checking
+//         {
+//             Console.WriteLine($"Your input ({currentLevel}) has been accepted");
+//             validLever = true;
+//             break;
+//         } else {
+//             Console.WriteLine($"The role name that you entered, {currentLevel} is not valid");
+//         }
     
 
-} while (validLever == false);
+// } while (validLever == false);
 
+string[] myStrings = new string[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
+string periodLocation;
+
+foreach(string myString in myStrings)
+{
+    Console.WriteLine(myString.IndexOf(".") - 1);
+}
